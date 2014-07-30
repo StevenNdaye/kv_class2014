@@ -56,11 +56,11 @@ test:
   port: 5432
 
 production:
-  adapter: postgresql || ENV['ADAPTER']
+  adapter: ENV['ADAPTER']
   encoding: unicode
-  database: kv_class2014_production || ENV['DATABASE']
+  database: ENV['DATABASE']
   pool: 5
-  username: postgres || ENV['USERNAME']
-  password: postgres || ENV['PASSWORD']
-  host: localhost || ENV['HOST']
-  port: 5432 || ENV['PORT']
+  username: ENV['USERNAME']
+  password: ENV['PASSWORD']
+  host: ENV['HOST']
+  port: :ENV['PORT']
